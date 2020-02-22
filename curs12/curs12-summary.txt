@@ -1,0 +1,21 @@
+----
+Maps
+A Map is an object that maps keys to values. 
+A Dictionary
+A map cannot contain duplicate keys: Each key can map to at most one value. 
+If you want to map a value to multiple ones, you map it to a list
+
+Available methods:
+put(key, value)
+putAll(Map)
+get(key)
+remove(key)
+keySet() - returns all the keys
+values() -returns all values
+entrySet() - returns Map.Entry objects which contains (key, value) pairs.
+
+usage:
+Map<String, String> mapOfStrings = new HashMap<>();
+mapOfStrings.put("Ana", "mere);
+mapOfStrings.put("Bob", "pere);
+mapOfStrings.put("Chris", "mure);

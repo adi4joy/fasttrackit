@@ -1,0 +1,82 @@
+people who learn
+are committed
+ask questions
+repeat success
+help others
+go the extra mile
+
+
+java basics
+
+variables
+data types
+operators
+arrays
+control structures
+files
+console
+
+
+tools
+
+source control:git
+ide: intellij idea
+maven
+command line
+
+
+oop
+concepts and principles
+inheritance
+overriding
+overloading
+polymorphism
+
+
+algorithms
+
+analitical thinking
+problem solving
+validation
+
+
+testing
+
+junit
+tdd introduction
+
+
+java api
+
+collections
+exceptions
+stream
+lambdas
+
+
+clean code
+
+solid principles
+code style
+
+
+frameworks
+
+introduction in spring boot web and data
+
+
+
+CURS 2
+
+Sintaxa vs Stil
+
+sintaxa:
+public static void main() {
+	
+}
+
+stil:
+public
+static
+void                      main(                String[])
+

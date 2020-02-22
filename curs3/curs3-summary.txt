@@ -1,0 +1,144 @@
+Unary operators
+	+  : transforms the number or variable into a positive number. It is implicit if you don't put it
+	-  : transforms the number or variable into a negative number
+	++ : increments a variable : ++a or a++ is equivalent with a=a+1
+		- it's importatn if you put it 
+			- before the variable, the increment will happen before the value read (prefix)
+			- after the variable, the increment will happen after the value read (postfix)
+		so, if we have 
+			int a=1;
+			b=++a; // b will have value 2 and a=2
+
+		but if we have
+			int a=1;
+			b=a++; // b will have value 1 and a=1
+
+	-- : decrements a variable : --a or a-- is equivalent with a=a-1
+	 	- the same rule of prefix or postfix apply to -- as to ++
+	!  : reverts a boolean value. 
+			- !true is false
+			- if we have boolean a = true; then !a is false
+			- also this is used to revert conditions
+
+Arithmetic operators:
+	+ : Additive operator (also used for String concatenation)
+		- adds two numbers
+	- : Substraction operator
+		- substracts the second number from the first one 
+	* : Multiplication operator
+		- multiplies two numbers
+	/ : division operator
+		- divides two numbers. For integer numbers the remainder will be ignored
+	% : remainder operator
+		- divides two numbers and returns the remainder for their division
+
+Conditional operators:
+	Equality operator : ==
+		- compares two variables or literals
+			eg. 1==1 is true
+				int a=3, b=4; then a==b is false
+		- for objects, the operator doesn't compare their content, but their address (two different objects have different addresses)
+			eg. String str1= new String("abc"); String str2=new String("abc"); then str1==str2 is false
+	    - if you use string literals the identical string literals will point to the same object. So "abc"=="abc" is true
+
+	Not Equal operator : !=
+			- compares two variables or literals
+			eg. 1!=1 is false
+				int a=3, b=4; then a!=b is true
+		- for objects, the operator doesn't compare their content, but their address (two different objects have different addresses)
+			eg. String str1= new String("abc"); String str2=new String("abc"); then str1!=str2 is true
+	    - if you use string literals the identical string literals will point to the same object. So "abc"!="abc" is false
+
+	Greater Than operator : >
+		- compares two variables or literals
+			eg. 1>1 is false; 
+			 int a=3, b=4, then a>b is true
+		- for equal variables, the operator will return false: 
+			eg 1>1 is false
+
+	Greater Or Equal Than operator : >=
+		- compares two variables or literals
+			eg. 5>=2 is true; 
+			 int a=3, b=4, then a>=b is false
+		- for equal variables, the operator will return true: 
+			eg 1>=1 is true
+
+	Smaller Than operator : <
+		- compares two variables or literals
+			eg. 5<2 is false; 
+			 int a=3, b=4, then a<b is true
+		- for equal variables, the operator will return false: 
+			eg 1<1 is false
+
+	Smaller Or Equal Than operator : <=
+		- compares two variables or literals
+			eg. 5<=2 is false; 
+			 int a=3, b=4, then a<=b is true
+		- for equal variables, the operator will return true: 
+			eg 1<=1 is true
+
+Bit Manipulation operators:
+
+	- the bit manipulation operators work on the bit representation of a number. So, in order to see it more clearly, you should work in the binary representation of a number.
+	- to switch a number to its binary representation you ca use Integer.toBinaryString()
+	AND Operator: &
+		- applies for each bit of the factors the AND operation
+		AND : 1&1=1, 1&0=0, 0&1=0, 0&0=0
+		- so for 1001 & 0101 = 0001
+	OR  Operator: |
+		- applies for each bit of the factors the OR operation
+		OR : 1|1=1, 1|0=0, 0|1=0, 0|0=0
+		- so for 1001 | 0101 = 1101
+
+	XOR Operator: ^
+		- applies for each bit of the factors the XOR operation
+		OR : 1^1=0, 1^0=1, 0^1=1, 0^0=0
+		- so for 1001 | 0101 = 1100
+
+	Shift Right Operator: >>
+		- moves the bits to right with the specified number
+		- the moved positions are lost
+		- so for 1001>>2 = 0010
+
+	Shift Left Operator: <<
+		- moves the bits to left with the specified number
+		- the new positions are filled with 0
+		- so for 1001<<2 = 100100
+
+
+Control statements
+IF: 	-helps us implement a decision if a condition is true or false	
+	- if:
+		- syntax:
+			if(<condition>){
+				<statements>
+			}
+	- if-else
+		if(<condition>){
+			<statements>
+		} else{
+			<statements
+		}
+	- if-else-if-else
+		if(<condition>){
+			<statements>
+		} else if(<another-condition>){
+
+		} else{
+			<statements>
+		}
+
+ Getting input from console:
+
+ We use java.util.Scanner
+
+        Scanner scanner = new Scanner(System.in);
+        
+        int intValue = scanner.nextInt();
+        System.out.println(intValue);
+        String word = scanner.next();
+        System.out.println(word);
+        double doubleValue = scanner.nextDouble();
+        System.out.println(doubleValue);
+        float floatValue = scanner.nextFloat();
+        System.out.println(floatValue);

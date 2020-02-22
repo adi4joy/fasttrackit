@@ -1,0 +1,86 @@
+- defining an executable class:
+	public class Main {
+		public static void main(String[] args){
+
+		}
+	}
+
+- defining a static function :
+	public static <return type> numeleFunctiei(<inputParams>){
+		// function body
+	}
+	
+	exemplu:
+	public static int add(int a, int b){
+		return a+b;
+	}
+	
+	return type poate lipsi:
+	public static void ceva(String a){
+	}
+	
+	input params pot lipsi
+	public static String faraInputParams(){
+		return "fara input";
+	}
+	
+	ambele pot lipsi
+	public static void faraNiciunul(){
+	
+	}
+
+- defining a variable:
+	only definition: <type> <name>    eg. int a;
+										  int a,b,c;
+	definition + initialization       eg. int a=1;
+										  int a, b=2, c;
+
+data types:
+	- primitives: short, byte, char, int, long, float, double
+	- objects : String, Object, <any other custom or platform object>
+	- primitive have different allocated sizes
+		- byte    : 1 byte  :           	        -128 to    		              127
+		- short   : 2 bytes :        		     -32,768 to 		 	       32,767
+		- int     : 4 bytes :             -2,147,483,648 to 		    2,147,483,647
+		- long    : 8 bytes : -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+		- float   : 4 bytes :                   3.4e−038 to                  3.4e+038
+		- double  : 8 bytes :		            1.7e−308 to                  1.7e+038
+		- boolean : 1 bit   :                       true or false
+		- char    : 2 bytes : ASCII characters
+
+literals:
+	- representation of a fixed value
+	- int   : 1, 100, 20000, 1_000_000
+	- float : 2F, 3.4F
+	- double: 23D, 5.2D
+	- long  : 2L, 2000L
+	- char  : 'c'
+	- string: "a value"
+	- hex   : 0x1A
+	- binary: 0B110101
+
+variables:
+	- instance variables = non-static fields
+	- class variables    = static fields
+	- local variables    = used in methods
+	- parameters		 = input for methods and functions
+
+	- ALWAYS named with lowercase and if they are multi word we use camelCase;
+	- constants are all UPPERCASE
+
+arrays: 
+	- definition: <type>[] <name>   or <type> <name>[];
+		eg: int[] array;
+
+	- initialization:
+		- specifying length:  
+			eg: int[] array = new int[10];
+		- specifying content
+			eg: int[] array = new int[]{15,23,5,1,2}
+	- element access: array[<index>]
+			eg: array[7]
+	- assigning value to element: array[7]=8;
+
+	- finding the length of an array: array.length
+	- the index of an array ALWAYS starts with 0. So the last index will be array.length-1
+
