@@ -10,7 +10,9 @@ public class Ex2 {
         personList.add(new Person("Laura", 25, "yellow"));
         personList.add(new Person("Victor", 26, "brown"));
         personList.add(new Person("Paula", 23, "red"));
+
         // 2.1
+
         List<String> nameList = new ArrayList<>();
         for (Person person : personList) {
             nameList.add(person.getName());
