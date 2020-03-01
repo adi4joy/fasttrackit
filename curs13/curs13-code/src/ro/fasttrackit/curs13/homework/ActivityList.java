@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ActivityList {
-    private final List<String> list;
+    private List<String> list;
 
     public ActivityList(List<String> list) {
         this.list = list;
