@@ -1,0 +1,18 @@
+Palindrome Problem:
+A palindrome is a word that is the same if you read it from left to right or from right to left
+
+Solution 1:
+- reverse the string, check if it is equal with the original one
+ex. 
+potop
+reversed: potop
+potop == potop? YES
+
+solution 2:
+- compare the first letter with the last one, the second with the last - 1
+
+eg
+potop
+compare letter 0 to 4 -> p==p  YES
+compare letter 1 to 3 -> o==o  YES
+compare letter 2 to 2 -> t==t  YES
