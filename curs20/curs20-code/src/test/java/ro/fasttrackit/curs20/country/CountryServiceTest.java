@@ -20,7 +20,7 @@ class CountryServiceTest {
     }
 
     @Test
-    @DisplayName("the contry names are displayed correctly")
+    @DisplayName("the country names are displayed correctly")
     void countryNames() {
         List<String> result = service.getCountriesName();
 
