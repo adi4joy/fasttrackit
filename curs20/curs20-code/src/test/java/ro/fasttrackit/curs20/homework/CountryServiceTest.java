@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
@@ -97,18 +98,30 @@ class CountryServiceTest {
     @Test
     @DisplayName("the countries are mapped correctly to population")
     void mapCountryToPopulation() {
-        // NU STIU CUM SE FACE TESTING LA MAPS
+        Map<String, List<Long>> result = service.mapCountryToPopulation();
+        assertThat(result).isEqualTo(Map.of(
+                "Romania", List.of(19861408L),
+                "Hungary", List.of(9823000L),
+                "Moldova", List.of(3553100L)
+        ));
     }
 
     @Test
     @DisplayName("the continents are mapped correctly to countries")
     void mapContinentToCountries() {
-        // NU STIU CUM SE FACE TESTING LA MAPS
+        Map<String, List<String>> result = service.mapContinentToCountries();
+        assertThat(result).isEqualTo(Map.of(
+                "Europe", List.of("Romania", "Moldova", "Hungary")
+        ));
     }
 
     @Test
     @DisplayName("the continents are mapped correctly to countries and sorted correctly by population")
     void mapContinentToCountriesSorted() {
         // NU STIU CUM SE FACE TESTING LA MAPS
+        Map<String, List<String>> result = service.mapContinentToCountriesSorted();
+        assertThat(result).isEqualTo(Map.of(
+                "Europe", List.of("Moldova", "Hungary", "Romania")
+        ));
     }
 }

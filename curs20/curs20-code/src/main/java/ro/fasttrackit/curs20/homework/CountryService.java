@@ -100,10 +100,20 @@ public class CountryService {
     }
 
     public Map<String, List<String>> mapContinentToCountriesSorted() {
+        //CODUL MEU
         return countries.stream()
                 .sorted(Comparator.comparing(Country::getPopulation))
                 .collect(
                         Collectors.groupingBy(Country::getContinent,
                                 mapping(Country::getName, toList())));
+        //CODUL LUI FANU
+/*
+        return countries.stream()
+                .collect(toMap(Country::getContinent,
+                        c -> List.of(c.getName()),
+                        (l1, l2) -> Stream.concat(l1.stream(), l2.stream())
+                                .collect(toList())));
+*/
+
     }
 }
